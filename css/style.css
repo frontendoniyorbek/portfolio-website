@@ -6,6 +6,8 @@
   --light-grey-bg: #d7d7d7;
   --light-grey: #eaeaeb;
   --bright-red-errors: #f43030;
+  --public-family: "Public Sans", "Arial", sans-serif;
+  --ibarra-real-nov-family: "Ibarra Real Nova, " Arial ", sans-serif";
 }
 
 @font-face {
@@ -72,7 +74,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: "Public Sans", "Arial", sans-serif;
+  font-family: var(--public-family);
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9;
@@ -88,6 +90,51 @@ body {
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* SITE-HEADER */
+.site-header {
+  padding-top: 6.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 4.2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+}
+
+.nav__link:active {
+  opacity: 0.6;
+}
+
+.active {
+  color: var(--primary-color);
 }
 
 /* MAIN-CONTENT */
