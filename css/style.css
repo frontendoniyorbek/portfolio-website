@@ -7,7 +7,7 @@
   --light-grey: #eaeaeb;
   --bright-red-errors: #f43030;
   --public-family: "Public Sans", "Arial", sans-serif;
-  --ibarra-real-nov-family: "Ibarra Real Nova, " Arial ", sans-serif";
+  --ibarra-real-fy: "Ibarra Real Nova", " Arial ", sans-serif;
 }
 
 @font-face {
@@ -55,8 +55,6 @@ html {
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 img {
@@ -64,11 +62,15 @@ img {
   height: auto;
 }
 
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
 body {
   display: flex;
@@ -140,4 +142,57 @@ body {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 3rem;
+  padding-bottom: 15rem;
+}
+
+.portfolio {
+  background-image: url(../images/portfolio-i.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 24.3rem;
+  padding-right: 66.5rem;
+}
+
+.portfolio__info {
+  padding-top: 5.6rem;
+  padding-right: 5.6rem;
+  background-color: #fafafa;
+  max-width: 445px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.portfolio__title {
+  font-family: var(--ibarra-real-fy);
+  margin-bottom: 5.3rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -0.446429px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  border: 0;
+  padding: 1.8rem 1.6rem;
+  background-color: var(--dark-blue);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn__img {
+  margin-right: 1.6rem;
+}
+
+.btn__text {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 2px;
 }
