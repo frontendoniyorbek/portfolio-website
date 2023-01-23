@@ -1,0 +1,96 @@
+:root {
+  --main-color: #33323d;
+  --primary-color: #5fb4a2;
+  --dark-blue: #203a4c;
+  --grayish-dark-blue: #33323d;
+  --light-grey-bg: #d7d7d7;
+  --light-grey: #eaeaeb;
+  --bright-red-errors: #f43030;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/PublicSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+    url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/IbarraRealNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/IbarraRealNova-Bold.woff2") format("woff2"),
+    url("../fonts/IbarraRealNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Public Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  color: var(--main-color);
+  background-color: #fff;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1150px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
