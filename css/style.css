@@ -113,8 +113,15 @@ body {
 
 /* SITE-HEADER */
 .site-header {
-  padding-top: 6.4rem;
+  padding-top: 4rem;
   padding-bottom: 2.4rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+  z-index: 10;
 }
 
 .site-header__container {
@@ -123,17 +130,22 @@ body {
   align-items: center;
 }
 
-.nav__list {
+.site-icon {
+  width: 60px;
+  height: 64px;
+}
+
+.sitenav__list {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.nav__item:not(:last-child) {
+.sitenav__item:not(:last-child) {
   margin-right: 4.2rem;
 }
 
-.nav__link {
+.sitenav__link {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--main-color);
@@ -144,11 +156,11 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.nav__link:hover {
+.sitenav__link:hover {
   opacity: 0.8;
 }
 
-.nav__link:active {
+.sitenav__link:active {
   opacity: 0.6;
 }
 
@@ -159,7 +171,7 @@ body {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
-  padding-top: 3rem;
+  padding-top: 20rem;
   padding-bottom: 15rem;
 }
 
@@ -197,7 +209,7 @@ body {
   align-items: center;
   text-transform: uppercase;
   border: 0;
-  padding: 1.8rem 1.6rem;
+  padding: 1.7rem 3rem 1.7rem 1.6rem;
   background-color: var(--dark-blue);
   color: #fff;
   text-align: center;
@@ -224,27 +236,29 @@ body {
 
 /* ABOUT-ME */
 .about-me {
-  padding: 15rem 4.8rem;
+  padding-top: 15rem;
+  padding-right: 4.8rem;
+  padding-bottom: 15rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.abour-me__img {
+.about-me__img {
   width: 540px;
   max-height: 600px;
   height: 100%;
   object-fit: cover;
-  margin-right: 1.5rem;
+  margin-right: 3rem;
 }
 
-.abour-me__info {
+.about-me__info {
   margin-left: auto;
   max-width: 350px;
   width: 100%;
 }
 
-.abour-me__title {
+.about-me__title {
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.1;
@@ -252,7 +266,7 @@ body {
   margin-bottom: 2.8rem;
 }
 
-.abour-me__text {
+.about-me__text {
   line-height: 1.9;
   opacity: 0.8;
   margin-bottom: 2.4rem;
@@ -310,7 +324,7 @@ body {
   align-items: center;
 }
 
-.footer__list {
+.site-footer__list {
   list-style: none;
   display: flex;
   align-items: center;
@@ -319,12 +333,12 @@ body {
   margin-right: auto;
 }
 
-.footer__item:not(:last-child) {
+.site-footer__item:not(:last-child) {
   margin-right: 4.2rem;
 }
 
-.footer__link {
-  font-size: 1.2;
+.site-footer__link {
+  font-size: 1.2rem;
   line-height: 1.2;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -345,8 +359,236 @@ body {
   margin-right: 1.5rem;
 }
 
-.social-networks__item {
+.social-networks__img-tg {
+  width: 40px;
+  height: 40px;
 }
 
-.social-networks__link {
+.toggle-btn {
+  display: none;
+}
+
+/* MEDIA */
+@media screen and (max-width: 980px) {
+  .portfolio {
+    padding-top: 20rem;
+    padding-right: 40rem;
+  }
+
+  .portfolio__info {
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+
+  .portfolio__title {
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: -0.357143px;
+  }
+
+  .about-me {
+    padding-right: 0;
+  }
+
+  .about-me__img {
+    width: 480px;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-header {
+    padding-bottom: 1.7rem;
+  }
+
+  .main-content {
+    padding-bottom: 9.6rem;
+  }
+
+  .portfolio {
+    padding-top: 32.2rem;
+    padding-right: 17.4rem;
+  }
+
+  .portfolio__info {
+    padding-right: 5.6rem;
+    padding-top: 5.6rem;
+  }
+
+  .about-me {
+    padding-top: 9.6rem;
+    padding-bottom: 9.6rem;
+  }
+
+  .about-me__info {
+    max-width: 339px;
+  }
+
+  .about-me__img {
+    width: 268px;
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .site-footer__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-left: 0;
+  }
+
+  .site-footer__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+
+  .site-footer__link {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .social-networks {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .contact-me {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-me__title {
+    margin-bottom: 4.3rem;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .about-me {
+    flex-direction: column;
+  }
+
+  .about-me__info {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-me__img {
+    width: 500px;
+    height: 450px;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .sitenav__list {
+    padding-left: 0;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .site-footer__container {
+    flex-direction: column;
+  }
+
+  .site-footer__icon {
+    margin-bottom: 3rem;
+  }
+
+  .social-networks {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .site-header {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sitenav {
+    display: none;
+  }
+
+  .sitenav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20rem;
+    color: var(--main-color);
+    opacity: 1;
+    display: none;
+  }
+
+  .sitenav__list {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    top: 2rem;
+    right: 2.4rem;
+    background-color: transparent;
+  }
+
+  .toggle-btn__image {
+    width: 48px;
+    height: 48px;
+    display: block;
+    padding: 1rem;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .site-icon {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    top: 2rem;
+    left: 2.4rem;
+    background-color: transparent;
+  }
+
+  .sitenav__link {
+    color: var(--main-color);
+  }
+
+  .main-content {
+    padding-top: 12rem;
+  }
+
+  .portfolio__title {
+    font-size: 3.2rem;
+  }
+
+  .btn {
+    padding: 0.7rem 0rem 0.7rem 0.6rem;
+  }
+
+  .about-me {
+    padding-top: 7px;
+  }
 }
