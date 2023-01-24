@@ -259,6 +259,7 @@ body {
 }
 
 .about-me__title {
+  font-family: var(--ibarra-real-fy);
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.1;
@@ -293,16 +294,17 @@ body {
   margin-top: 4.6rem;
   background-color: var(--main-color);
   opacity: 0.15;
+  height: 1px;
 }
 
-/* CONTACT-ME */
-.contact-me {
+/* PROJECT-TOGETHER */
+.project-together {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.contact-me__title {
+.project-together__title {
   max-width: 350px;
   width: 100%;
   font-weight: 700;
@@ -457,12 +459,12 @@ body {
 }
 
 @media screen and (max-width: 668px) {
-  .contact-me {
+  .project-together {
     flex-direction: column;
     justify-content: center;
   }
 
-  .contact-me__title {
+  .project-together__title {
     margin-bottom: 4.3rem;
   }
 }
@@ -503,7 +505,7 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
   .site-header {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -555,14 +557,10 @@ body {
     border-radius: 50%;
   }
 
-  .hidden {
-    display: block;
-  }
-
   .site-icon {
     display: block;
     position: fixed;
-    z-index: 9999;
+    z-index: 999999;
     top: 2rem;
     left: 2.4rem;
     background-color: transparent;
@@ -570,6 +568,10 @@ body {
 
   .sitenav__link {
     color: var(--main-color);
+  }
+
+  .hidden {
+    display: block;
   }
 
   .main-content {
@@ -582,9 +584,5 @@ body {
 
   .btn {
     padding: 0.7rem 0rem 0.7rem 0.6rem;
-  }
-
-  .about-me {
-    padding-top: 7px;
   }
 }
