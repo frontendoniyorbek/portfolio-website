@@ -1,0 +1,26 @@
+.communication-department-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.communication-department__info {
+  max-width: 635px;
+  width: 100%;
+}
+
+.communication-department__title {
+}
+
+.communication-department__title__tetx {
+}
+
+.social-networks {
+}
+.social-networks__item {
+}
+.social-networks__link {
+}
+.social-networks__img {
+}
+.social-networks__img-tg {
+}

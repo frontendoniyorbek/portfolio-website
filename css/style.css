@@ -486,10 +486,6 @@ body {
 }
 
 @media screen and (max-width: 460px) {
-  .sitenav__list {
-    padding-left: 0;
-  }
-
   .sitenav__item:not(:last-child) {
     margin-right: 2rem;
   }
